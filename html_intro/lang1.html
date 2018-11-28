@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<meta charset="utf-8">
+<title>html intro</title>
+<script src="init.js">
+
+
+</script>
+<script>
+function renderCode()
+{
+	var para = document.getElementsByClassName("standardtextLeft");
+	para[0].textContent = "function initButtons() \n\
+	{ \n\
+		var elems = document.getElementsByClassName(\"whiteItem\"); \n\
+		var bg = document.getElementsByClassName(\"bg\"); \n\
+		\n\
+		var e2 = document.getElementsByClassName(\"whiteItem_home\"); \n\
+		e2[0].onclick = redir; \n\
+        elems[1].style.borderWidth = \"0px 0px 5px 0px\"; \n\
+        elems[2].textContent = \"Info\";\n\
+        elems[1].textContent = \"Exam\";\n\
+        elems[0].textContent = \"CSS\";\n\
+        e2[0].style.cursor = \"pointer\";\
+        for(var i = 0; i < elems.length; i++)\n\
+			{\n\
+				elems[i].style.cursor = \"pointer\";\n\
+			}\n\
+        for ( var i = 0; i < elems.length; i++ ) (function(i){ \n\
+            elems[i].onclick = function() {\n\
+                var tc = elems[i].textContent;\n\
+                window.location = tc + \".html\";\n\
+            }\n\
+          })(i);\n\
+		\n\
+    }\n\
+    function redir(link)\n\
+		{\n\
+			window.location = \"index.html\";\n\
+		}";
+		para[0].style.marginTop = "auto";
+}
+</script>
+</head>
+
+<body onload = "initButtons(), renderCode()">
+<div class = "banner">
+<div class = "ico"></div>
+	<p class = "white">c a t s</p>
+	<p class = "whiteItem">info</p>
+	<p class = "whiteItem">contact</p>
+	<p class = "whiteItem">cats</p>
+	<p class = "whiteItem_home">Home</p>
+</div>
+<p class = "standardtextLeft">
+
+</p>
+
+
+</body>
+</html>

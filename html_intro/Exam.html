@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<meta charset="utf-8">
+<title>html intro</title>
+<script src="init.js">
+
+</script>
+</head>
+
+<body onload = "initButtons()">
+<div class = "banner">
+<div class = "ico"></div>
+	<p class = "white">c a t s</p>
+	<p class = "whiteItem" >info</p>
+	<p class = "whiteItem">contact</p>
+	<p class = "whiteItem">cats</p>
+	<p class = "whiteItem_home">Home</p>
+</div>
+
+<div class = "bg"></div>
+
+<br>
+	<br>
+	<br>
+	<br>
+	<br>
+<ul>
+	<li>
+		
+	</li>
+</ul>
+<h1 class = "absolute">
+	hello
+</h1>
+<table>
+	<tr>
+		<th>
+			t
+		</th>
+		<th>
+			a
+		</th>
+		<th>
+			b
+		</th>
+		<th>
+			l
+		</th>
+		<th>
+			e
+		</th>
+	</tr>
+	
+	<tr>
+		<td>
+			t
+		</td>
+		<td>
+			a
+		</td>
+		<td>
+			b
+		</td>
+		<td>
+			l
+		</td>
+		<td>
+			e
+		</td>
+	</tr>
+</table>
+<p>p tag</p>
+<a href="https://www.google.com">ugly unstyled link</a>
+<script type="text/javascript">
+update();
+function update(){
+	var t = document.getElementsByClassName("absolute")[0];
+	window.requestAnimationFrame(update);
+	var a = t.scrollTop; 
+	var b = t.scrollHeight - t.clientHeight;
+	var c = a / b;
+	
+	t.textContent = window.scrollY - t.scrollHeight;
+
+	t.style.opacity = window.scrollY - t.scrollHeight;
+
+}
+	</script>
+<br>
+	<br>
+	<br>
+	<br>
+	<br><br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+</body>
+</html>

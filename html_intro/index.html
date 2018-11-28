@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<link rel="stylesheet" type="text/css" href="mainpage.css">
+<meta charset="utf-8">
+<title>html intro</title>
+<script src="init.js"></script>
+<script type="text/javascript">
+function navInit()
+{
+	var allaKnappar = document.getElementsByClassName("langIcons");
+	allaKnappar[2].style.backgroundImage = "url(CSS_logo.png)";
+	allaKnappar[1].style.backgroundImage = "url(JS_logo.png)";
+	allaKnappar[0].style.backgroundImage = "url(HTML_logo.png)";
+
+	for ( var i = 0; i < allaKnappar.length; i++ ) (function(i){ 
+            allaKnappar[i].onclick = function() {
+                var languageID = "lang"+i.toString();
+                window.location = languageID + ".html";
+            }
+          })(i);
+}
+</script>
+</head>
+
+<body onload = "initButtons(), navInit()">
+<div class = "banner">
+<div class = "ico"></div>
+	<p class = "white">c a t s</p>
+	<p class = "whiteItem" >info</p>
+	<p class = "whiteItem">contact</p>
+	<p class = "whiteItem">cats</p>
+	<p class = "whiteItem_home">Home</p>
+</div>
+
+<div class = "bg"></div>
+<div style="margin: 100px auto auto auto"></div>
+<p style="font-size: 400%; display: inline-block; text-align: right;" class = standardtext>
+		>Källkod
+		</p>
+<div class="codeanim"></div>
+<div class = "centered">
+	
+	<div class = "langIcons"></div>
+	<div class = "langIcons"></div>
+	<div class = "langIcons"></div>
+</div>
+<div style="margin: 100px auto auto auto"></div>
+<div class = "lineThin"></div>
+<div style="margin: 75px auto auto 200px"></div>
+<p class = standardtext>
+	^ Uppgiftssidor finns i navbaren ^
+	</p>
+
+</body>
+</html>
